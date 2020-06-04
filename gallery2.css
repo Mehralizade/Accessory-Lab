@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+body, html{
+  margin: 0;
+  background: #2b2927;
+  font-family: 'Times', sans-serif;
+}
+h1{
+  text-align: center;
+  color:white;
+  font-family: 'Tangerine', sans-serif;
+  font-size: 120px;
+  
+}
+
+h2{
+font-size:30px;
+}
+.container-all{
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.container{
+  width: 100%;
+  overflow:hidden;
+  -height: fit-content;
+  margin-left: 100px;
+  padding: 10px;
+  display:block;
+  position:relative;
+  float:left;
+}
+
+img{
+  width: 80%;
+  height: 600px;
+  transition-duration: .3s;
+  max-width: 100%;
+  display:block;
+  overflow:hidden;
+  cursor:pointer;
+}
+.title{
+  position:absolute;
+  display:block;
+  cursor:pointer;
+  top: 35%;
+  display: none;
+  margin-left: 40%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-family: 'Tangerine', sans-serif;
+  font-size: 100px;
+  text-shadow: 1px 5px 10px black;
+  transition-duration: .3s;
+}
+.text{
+  position:absolute;
+  top: 70%;
+  cursor:pointer;
+  max-width: 80%;
+  text-align:center;
+  margin-left: 40%;
+  text-shadow: 1px 5px 10px black;
+  font-size: 1em;
+  display:none;
+  margin-right: -50%;
+  transition-duration: .3s;
+  transform: translate(-50%, -50%) 
+}
+.container:hover img{
+  transform: scale(1.2);
+  transition-duration: .5s;
+  filter: grayscale(50%);
+  opacity: .2;
+}
+.container:hover span{
+  color:white;
+  display: block;
+  transition-duration: .5s;
+}
+@media only screen and (max-width: 900px) {
+    .container {
+        width: calc(50% - 6px);
+    }
+}
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
+}
