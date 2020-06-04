@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Source+Sans+Pro:200,300,400,600');
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+}
+
+
+.navbar a {
+
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.name{
+font-family: 'Montaga', serif;
+  font-size: 20px;
+font-style: italic;
+	}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fcf6f2;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top:100px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 48px;
+  color: #151E3F;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.savings {
+  display: flex;
+  > * {
+    margin: 5px;
+  }
+}
+
+.media {
+          
+  width: 300px;
+  height: 200px;
+  text-align:center;
+  overflow: hidden;
+  display: flex;
+  margin-left: 20px;
+  margin-top:150px;
+
+  align-items: center;
+
+  img {
+      justify-content: center;
+
+      max-width: 100%;
+      height: auto;
+    }
+}
+
+
+p {
+  position:absolute;
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing:1px;
+  margin-left:120px;
+  margin-top:130px;
+}
+
+.add{
+ 
+  margin-left:410px;
+  border: 2px solid transparent;
+  background: #14374d;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 8px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 4px;
+  transition: 0.25s;
+  display: block;
+  width: 150px;
+  text-align: center;
+   text-decoration: none;
+
+}
+
+  a:hover {
+    text-decoration: underline; }
