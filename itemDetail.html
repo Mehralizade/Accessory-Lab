@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="master.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>Details</title>
 </head>
 <body>
+<div class = container>
     <h2>Add details!</h2>
     <div class='container mx-auto'>
     <form>
@@ -18,6 +18,7 @@
       </label>
   
       </div>
+      
         <div class="form-group">
           <label for="exampleFormControlFile1">Upload the image of accessory
           <input type="file" class="form-control-file" id="exampleFormControlFile1">
@@ -38,10 +39,12 @@
         <label for="exampleFormControlTextarea1">More details
     <textarea type='text' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </label>
-</div>
       </form>
       <button type='submit' class='btn btn-primary' onclick="uploadFile()">Submit</button>
     </div>
+    </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
