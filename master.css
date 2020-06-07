@@ -34,7 +34,7 @@ font-family:'Source Sans Pro', sans-serif;
  .container {
       float: left;
       position: relative;
-      left: 35%;
+      width:100%;
     }
     .form-group{
       float: left;
