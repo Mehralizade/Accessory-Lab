@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" type="text/css" href="util.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+	
 
 </head>
 <body>
@@ -45,12 +45,12 @@
 
 
 					<div class="container-btn m-t-32">
-						<button class="form-btn" id="set__budget">
+						<button type='submit' onclick="uploadFile()" class="form-btn" id="set__budget">
 							Set a budget
 						</button>
 					</div>
 
-
+					
 				</form>
 
 
@@ -63,10 +63,12 @@
 	</div>
 
 
-
-	<script src="./budget.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 	<script src="jquery/js/jquery-1.9.0.min.js"></script>
 	<script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+	<!--<script src="budget.js"></script>-->
+	<script src='budgetFirebase.js'></script>
 </body>
 </html>
