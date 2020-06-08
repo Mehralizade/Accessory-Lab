@@ -68,12 +68,12 @@ var currentItem = itemObject[keys[0]];
         var image = document.createElement('img')
         image.src = 'Purse.png'
         $(container).append(image)
-        var budget = document.createElement('h4')
+        var budget = document.createElement('h5')
         $(budget).html("Your new budget")
-        var name = document.createElement('h5')
+        var name = document.createElement('p')
         $(name).html("Name: " + currentItem.name)
 
-        var price = document.createElement('h5')
+        var price = document.createElement('p')
         $(price).html("Remaining amount: " + currentItem.price+ "$")
         $(container).append(budget)
         $(container).append(name)
@@ -88,7 +88,7 @@ $("#contents").append(container)
       })
   firebase.database().ref('/boughtList/').once('value').then(function(snapshot){
     if(snapshot.val()===null){
-      var row = document.createElement('h2')
+      var row = document.createElement('h5')
       $(row).html('You have not anything..')
       
     }
@@ -128,8 +128,8 @@ $("#contents").append(container)
 
       var image = document.createElement('img')
       $(image).addClass('col-sm-6')
-      $(image).css('height',"250px")
-      $(image).css('width',"60px")
+      $(image).css('height',"200px")
+      $(image).css('width',"45px")
       image.src = currentItem.url
       $(image).addClass('contentImage')
    

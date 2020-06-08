@@ -63,14 +63,14 @@ button:hover {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.65);
+  background-color: white;
 }
 
 .wrap {
-  width: 390px;
+  width: 30%;
   border-radius: 10px;
   overflow: hidden;
-
+  border:2px solid gray;
   background: transparent;
 }
 

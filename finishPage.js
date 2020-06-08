@@ -31,7 +31,10 @@ console.log(currentItem.price)
 console.log(parseInt(extractMoney(currentItem.price),10)-10)
 if (parseInt(extractMoney(currentItem.price),10)>0){
     var image = document.createElement('img')
-    image.src = 'Purse.png'
+    image.src = 'moneyBag.png'
+    $(image).css('width','300px')
+    $(image).css('height','200px')
+
     $("#lastWords").append(image)
     words = document.createElement('h3')
 
