@@ -1,12 +1,47 @@
 body{
 background-color: #fcf6f2;
- 
   }
 #center{
   position: absolute;
   left:30%;
 }
-  
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+  }
+  .navbar a {
+    float: right;
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .container{
+    margin-top:10%;
+  }
+  .navbar a:hover {
+    background:#333 ;
+    color: black;
+  }  
+.form-group{
+width:100%;
+font-family:'Source Sans Pro', sans-serif;
+}
+.contentImage{
+    width:100%;
+    height:100%;
+   float:right;
+   border:2px transparent gray;
+   border-radius:5px;
+}
+.col-sm-6 {
+    width:100%;
+    height:20%;
+}
 img{
   height:20%;
 }
