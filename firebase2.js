@@ -63,12 +63,18 @@ function uploadFile(){
   function displayData(){
       firebase.database().ref('/pressureItemList/').once('value').then(function(snapshot){
         if(snapshot.val()!=null){
-          
+        var sum = 0
         var itemObject = snapshot.val()
         var keys = Object.keys(itemObject)
-          
+        for (var i=0; i<keys.length;i++){
+         sum += parseInt(itemObject[keys[i]].price);}
+         var price = document.createElement('h3')
+         $(price).html("Total savings: "+sum + "$")
+              
+                $("#contents").append(price)
         for (var i=0; i<keys.length;i++){
  currentItem = itemObject[keys[i]];
+
 if(i%3==0){
 currentRow = document.createElement('div')
         $(currentRow).addClass('row')
@@ -79,7 +85,7 @@ $(col).addClass('col-lg-4 col-md-3 col-sm-12')
 var card =document.createElement('div')
 $(card).addClass('card')
 card2 = document.createElement('div')
-
+ 
 $(card2).addClass('row card-body')
 
 col2 = document.createElement('div')

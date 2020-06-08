@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>Details</title>
 </head>
 <body>
+  <!--navbar-->
+  <button type="button" class="btn btn-primary float-lg-right"><a id='upl' href="setBudget.html">Set budget</a> </button>
 <div class = container>
     <h2>Add details</h2>
     <div class='container mx-auto'>
@@ -38,9 +41,12 @@
           <div class="form-group">
         <label for="exampleFormControlTextarea1">More details
     <textarea type='text' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    
 </label>
+
       </form>
-      <button type='submit' class='btn btn-primary' onclick="uploadFile()">Submit</button>
+     
+      <input type='button' class='btn btn-primary' onclick="uploadFile()">Submit</input>
     </div>
     </div>
     </div>
@@ -50,6 +56,6 @@
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
     
     
-    <script src='js/firebase.js'></script>
+    <script src='firebase.js'></script>
 </body>
 </html>

@@ -65,20 +65,22 @@ var key = firebase.database().ref('/budgetList/').push();
           console.log(keys)
         
 var currentItem = itemObject[keys[0]];
-
+          var container = document.createElement('container')
         var image = document.createElement('img')
         image.src = 'Purse.png'
-        $("#contents").append(image)
-        var budget = document.createElement('h3')
+        $(container).append(image)
+        var budget = document.createElement('h4')
         $(budget).html("Your new budget")
-        var name = document.createElement('h4')
+        var name = document.createElement('h5')
         $(name).html("Name: " + currentItem.name)
 
-        var price = document.createElement('h4')
-        $(price).html("Remaining amount: " + currentItem.price)
-        $("#contents").append(budget)
-        $("#contents").append(name)
-        $("#contents").append(price)
+        var price = document.createElement('h5')
+        $(price).html("Remaining amount: " + currentItem.price+ "$")
+        $(container).append(budget)
+        $(container).append(name)
+        $(container).append(price)
+       
+$("#contents").append(container)
 
 
 
@@ -96,15 +98,18 @@ var currentItem = itemObject[keys[0]];
       
     var boughtObject = snapshot.val()
     var keys = Object.keys(boughtObject)
+    currentRow = document.createElement('div')
+    $(currentRow).addClass('row')
     for (var i=0; i<keys.length;i++){
-      currentRow = document.createElement('div')
+     
       currentItem = boughtObject[keys[i]];
-      $(currentRow).addClass('row')
+      
       $("#contents").append(currentRow)
       var col =document.createElement('div')
-      $(col).addClass('col-lg-4 col-md-3 col-sm-12')
+      $(col).addClass('col-lg-12 col-md-12 col-sm-12')
       var card =document.createElement('div')
       $(card).addClass('card')
+      $(card).css('margin','5px')
       card2 = document.createElement('div')
       
       $(card2).addClass('row card-body')
@@ -116,28 +121,28 @@ var currentItem = itemObject[keys[0]];
       $(itemName).addClass('card-subtitle mb-2 text-muted')
       var itemPrice = document.createElement('h6')
       var itemPlace =document.createElement('h6')
-      var addInfo =document.createElement('h6')
+      
       $(itemName).html(currentItem.name)
       $(itemPrice).html('Price: ' + currentItem.price)
       $(itemPlace).html('Place: ' + currentItem.place)
-      $(addInfo).html('Details: ' + currentItem.additionalInfo)
+      
 
       var image = document.createElement('img')
       $(image).addClass('col-sm-6')
+      $(image).css('height',"250px")
+      $(image).css('width',"60px")
       image.src = currentItem.url
       $(image).addClass('contentImage')
    
    
 
-$(itemName).html(currentItem.name)
-$(itemPrice).html('Price: ' + currentItem.price)
-$(itemPlace).html('Place: ' + currentItem.place)
 
 
 
 $(col2).append(itemName)
 $(col2).append(itemPrice)
 $(col2).append(itemPlace)
+
 
 $(card2).append(image)
 $(card2).append(col2)
