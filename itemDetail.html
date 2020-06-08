@@ -9,7 +9,36 @@
     <title>Details</title>
 </head>
 <body>
-  <!--navbar-->
+  <nav id='navbar' class="navbar navbar-expand-lg shift navbar-dark sticky-top">
+        <a class="navbar-brand" id='nav-item' href="Home.html">Accessory Lab</a>
+        <button class="navbar-toggler" style='color: rgba(255,255,255,.5);
+        border-color: rgba(255,255,255,.1);' type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" >
+                <a  class="nav-link btn btn-outline-light my-2 my-sm-0"   href="Home.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+          </ul>
+          <ul id="center">
+            <form class="form-inline my-2 ml-3 my-lg-0" role="search" >
+              <input id='search' class="form-control mr-sm-2" style='width:20rem;' type="search" placeholder="Type the exact name.." aria-label="Search" name="q">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="button" onclick="searchItem()">Search for item</button>
+            </form>
+          </ul>
+          <ul class="nav navbar-nav float-lg-right">
+            <li class="nav-item active">
+                <a class="nav-link btn btn-outline-light my-2 my-sm-0" style='margin-right:5%;' href="Gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link btn btn-outline-light my-2 my-sm-0"   href="budgetDisplay.html">My Budget<span class="sr-only">(current)</span></a>
+              </li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    
   <button type="button" class="btn btn-primary float-lg-right"><a id='upl' href="setBudget.html">Set budget</a> </button>
 <div class = container>
     <h2>Add details</h2>
