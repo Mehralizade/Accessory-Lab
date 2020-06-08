@@ -37,11 +37,10 @@ var key = firebase.database().ref('/budgetList/').push();
             name:$("#month").val(),
             price:$("#amount").val()
           })
-          
+          alert('Budget successfully created!')
       
       
-        // Handle successful uploads on complete
-        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+    
         
         }
   function displayData(){

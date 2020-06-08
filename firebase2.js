@@ -57,12 +57,23 @@ function uploadFile(){
         
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-        
+        alert('Item sucessfully added to peer pressure savings!')
       });
   }
   function displayData(){
       firebase.database().ref('/pressureItemList/').once('value').then(function(snapshot){
-        if(snapshot.val()!=null){
+         if(snapshot.val()===null){
+          currentRow = document.createElement('div')
+          $(currentRow).addClass('container mx-auto')
+          notification = document.createElement('h5')
+          notification1 = document.createElement('h4')
+          $(notification1).html('Nothing to show')
+          $(notification).html('Seems like you have no pressure today.. :)')
+          $(currentRow).append(notification1)
+          $(currentRow).append(notification)
+          $("#contents").append(currentRow)
+  }
+       else{
         var sum = 0
         var itemObject = snapshot.val()
         var keys = Object.keys(itemObject)

@@ -61,7 +61,7 @@ function uploadFile(){
               bought:false
           })
           
-      
+      alert('Item sucessfully added to gallery!')
         });
         
         // Handle successful uploads on complete
@@ -73,7 +73,19 @@ function uploadFile(){
     var result = []
     var val = 0
       firebase.database().ref('/itemList/').once('value').then(function(snapshot){
-        if(snapshot.val()!=null){
+        if(snapshot.val()===null){
+          currentRow = document.createElement('div')
+          $(currentRow).addClass('container mx-auto')
+          notification = document.createElement('h5')
+          notification1 = document.createElement('h4')
+          $(notification1).html('Nothing to show')
+        
+          $(currentRow).append(notification1)
+         
+          $("#contents").append(currentRow)
+        }
+
+        else{
           
         var itemObject = snapshot.val()
         var keys = Object.keys(itemObject)
@@ -606,3 +618,7 @@ $(col2).append(button)
       })
   }
 
+  function redirect(){
+    window.location.href='finishPage.html';
+    
+ }
